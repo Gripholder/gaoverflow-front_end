@@ -38,7 +38,6 @@ class Question extends Component {
   }
 
   onSubmit(e){
-    console.log("in onSubmit:", e.target.value)
     axios.post('http://localhost:4000/api/questions', {content: this.state.input})
          .then(response => console.log('response', response))
          .catch(err => console.log('error:', err))
@@ -58,7 +57,6 @@ editQuestion(){
 }
 
 handleEditInput(e){
-  console.log(this.state.input)
   this.setState({
     input: e.target.value
   })
